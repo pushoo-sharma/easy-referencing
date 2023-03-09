@@ -1,18 +1,16 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
-import ChildFunc from './child';
+// import ChildFunc from './child';
 
 function App() {
 
-  const [nameState, setNameState] = useState("pushpak");
-
-  const changeName = (value) => {
-    setNameState(value);
-  }
+  const age = 22;
 
   return (
     <div className="App">
-      <ChildFunc props={nameState} changeName={changeName}/>
+      {
+        age && age > 18 ? (<><div>check</div> {console.log("checking ")}</>) : (<div></div>)
+      }
     </div>
   );
 }
